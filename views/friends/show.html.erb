@@ -1,0 +1,21 @@
+<div class="mx-auto" style="width: 200px;"> 
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @friend.first_name + " " + @friend.last_name%></h5>
+      <p class="card-text">
+      Email: <%= @friend.email%>
+      </br>
+      Phone: <%= @friend.phone%>
+      </br>
+      Twitter: <%= @friend.twitter%>
+      </p>
+    </div>
+  </div>
+</div>
+<br/>
+
+<p class="mx-auto" style="width: 200px;">
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %>
+<%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+<%= link_to 'Back', friends_path, class:"btn btn-dark" %>
+</p>
